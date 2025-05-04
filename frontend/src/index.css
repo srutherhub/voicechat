@@ -1,3 +1,25 @@
+:root {
+  --black: #000000;
+  --black2: #020214;
+  --darkblue: #040429;
+  --darkblue2: #06073e;
+  --darkblue3: #070952;
+  --blue: #090b67;
+  --blue2: #0b0d7b;
+}
+
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black2);
+  color: white;
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }

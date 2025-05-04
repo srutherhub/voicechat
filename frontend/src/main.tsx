@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router";
+import "./index.css";
+import App from "./App.tsx";
+import { DeviceSettings } from "./pages/settings/DeviceSettings.tsx";
+import { AudioPlayer } from "./pages/home/AudioPlayer.tsx";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const root = document.getElementById("root") as HTMLElement;
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="app" element={<App />}>
+      <Route path="home" element={<AudioPlayer />} />
+        <Route path="settings" element={<DeviceSettings />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
